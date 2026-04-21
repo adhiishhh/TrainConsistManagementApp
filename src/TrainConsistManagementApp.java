@@ -17,5 +17,27 @@ public class TrainConsistManagementApp {
 
         // Display current train
         System.out.println("Train consist: " + train);
+
+        // ================= UC2 =================
+        System.out.println("\n===================================");
+        System.out.println("UC2 - Add Passenger Bogies");
+        System.out.println("===================================");
+
+        List<String> passengerBogies = new ArrayList<>();
+
+        // Add bogies
+        passengerBogies.add("Sleeper");
+        passengerBogies.add("AC Chair");
+        passengerBogies.add("First Class");
+
+        System.out.println("After adding bogies: " + passengerBogies);
+
+        // Remove one bogie
+        passengerBogies.remove("AC Chair");
+
+        System.out.println("After removing AC Chair: " + passengerBogies);
+
+        // Check existence
+        System.out.println("Does Sleeper exist? " + passengerBogies.contains("Sleeper"));
     }
 }
