@@ -117,5 +117,43 @@ public class TrainConsistManagementApp {
         for (Map.Entry<String, Integer> entry : capacityMap.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
+
+        // ================= UC7 =================
+        System.out.println("\n===================================");
+        System.out.println("UC7 - Sort Bogies by Capacity");
+        System.out.println("===================================");
+
+// Bogie class
+        class Bogie {
+            String name;
+            int capacity;
+
+            Bogie(String name, int capacity) {
+                this.name = name;
+                this.capacity = capacity;
+            }
+        }
+
+        List<Bogie> bogieList = new ArrayList<>();
+
+// Add bogies
+        bogieList.add(new Bogie("Sleeper", 72));
+        bogieList.add(new Bogie("AC Chair", 60));
+        bogieList.add(new Bogie("First Class", 40));
+
+// Before sorting
+        System.out.println("Before Sorting:");
+        for (Bogie b : bogieList) {
+            System.out.println(b.name + " -> " + b.capacity);
+        }
+
+// Sort using Comparator
+        bogieList.sort(Comparator.comparingInt(b -> b.capacity));
+
+// After sorting
+        System.out.println("\nAfter Sorting:");
+        for (Bogie b : bogieList) {
+            System.out.println(b.name + " -> " + b.capacity);
+        }
     }
 }
