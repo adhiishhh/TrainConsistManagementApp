@@ -56,5 +56,31 @@ public class TrainConsistManagementApp {
 
 // Display unique bogies
         System.out.println("Unique Bogie IDs: " + bogieIDs);
+
+        // ================= UC4 =================
+        System.out.println("\n===================================");
+        System.out.println("UC4 - Maintain Ordered Train Consist");
+        System.out.println("===================================");
+
+        LinkedList<String> trainList = new LinkedList<>();
+
+// Add bogies
+        trainList.add("Engine");
+        trainList.add("Sleeper");
+        trainList.add("AC");
+        trainList.add("Cargo");
+        trainList.add("Guard");
+
+        System.out.println("Initial Train: " + trainList);
+
+// Insert Pantry at position 2
+        trainList.add(2, "Pantry");
+        System.out.println("After adding Pantry at position 2: " + trainList);
+
+// Remove first and last bogie
+        trainList.removeFirst();
+        trainList.removeLast();
+
+        System.out.println("Final Train: " + trainList);
     }
 }
