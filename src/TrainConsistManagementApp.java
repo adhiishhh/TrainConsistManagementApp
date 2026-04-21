@@ -100,5 +100,22 @@ public class TrainConsistManagementApp {
         formation.add("Sleeper");
 
         System.out.println("Final Formation: " + formation);
+
+        // ================= UC6 =================
+        System.out.println("\n===================================");
+        System.out.println("UC6 - Map Bogie to Capacity");
+        System.out.println("===================================");
+
+        Map<String, Integer> capacityMap = new HashMap<>();
+
+// Add bogie-capacity mapping
+        capacityMap.put("Sleeper", 72);
+        capacityMap.put("AC Chair", 60);
+        capacityMap.put("First Class", 40);
+
+// Display all entries
+        for (Map.Entry<String, Integer> entry : capacityMap.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
     }
 }
