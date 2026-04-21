@@ -39,5 +39,22 @@ public class TrainConsistManagementApp {
 
         // Check existence
         System.out.println("Does Sleeper exist? " + passengerBogies.contains("Sleeper"));
+
+        // ================= UC3 =================
+        System.out.println("\n===================================");
+        System.out.println("UC3 - Track Unique Bogie IDs");
+        System.out.println("===================================");
+
+        Set<String> bogieIDs = new HashSet<>();
+
+// Add bogie IDs (with duplicates)
+        bogieIDs.add("BG101");
+        bogieIDs.add("BG102");
+        bogieIDs.add("BG103");
+        bogieIDs.add("BG101"); // duplicate
+        bogieIDs.add("BG102"); // duplicate
+
+// Display unique bogies
+        System.out.println("Unique Bogie IDs: " + bogieIDs);
     }
 }
