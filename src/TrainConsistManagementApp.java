@@ -82,5 +82,23 @@ public class TrainConsistManagementApp {
         trainList.removeLast();
 
         System.out.println("Final Train: " + trainList);
+
+        // ================= UC5 =================
+        System.out.println("\n===================================");
+        System.out.println("UC5 - Preserve Insertion Order of Bogies");
+        System.out.println("===================================");
+
+        Set<String> formation = new LinkedHashSet<>();
+
+// Add bogies
+        formation.add("Engine");
+        formation.add("Sleeper");
+        formation.add("Cargo");
+        formation.add("Guard");
+
+// Add duplicate
+        formation.add("Sleeper");
+
+        System.out.println("Final Formation: " + formation);
     }
 }
